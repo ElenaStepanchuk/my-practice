@@ -6,6 +6,6 @@ var t=arguments[3];function e(t){return(e="function"==typeof Symbol&&"symbol"==t
 },{}],"kz9M":[function(require,module,exports) {
 
 },{}],"Focm":[function(require,module,exports) {
-"use strict";require("./sass/main.scss");var s=e(require("simplelightbox"));function e(s){return s&&s.__esModule?s:{default:s}}require("simplelightbox/dist/simple-lightbox.min.css");
+"use strict";require("./sass/main.scss");var i=s(require("simplelightbox"));function s(i){return i&&i.__esModule?i:{default:i}}require("simplelightbox/dist/simple-lightbox.min.css");const t=new i.default(".gallery a",{captions:!0,captionsData:"alt",captionPosition:"bottom",captionDelay:250,nav:!0,close:!0});
 },{"./sass/main.scss":"clu1","simplelightbox":"yx6k","simplelightbox/dist/simple-lightbox.min.css":"kz9M"}]},{},["Focm"], null)
-//# sourceMappingURL=/my-practice/src.b07caf2d.js.map
+//# sourceMappingURL=/my-practice/src.c6266cf0.js.map
