@@ -5,3 +5,11 @@ import simpleLightbox from 'simplelightbox';
 
 // Для gallery-simpleLightbox.html
 
+const lightbox = new SimpleLightbox('.gallery a', {
+    captions: true,
+    captionsData: 'alt',
+    captionPosition: 'bottom',
+    captionDelay: 250,
+    nav: true,
+    close: true,
+  });
