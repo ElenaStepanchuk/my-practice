@@ -1,3 +1,9 @@
+// расстояние между карточками:
+$card-set-gap: 20px;
+// количество карточек:
+$number-of-card: 3;
+// ширина контейнера
+$container-width: 960px;
 body {
   color: #757575;
   font-family: Roboto, sans-serif;
@@ -33,9 +39,69 @@ ol {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  list-style: none;
+}
+
+.title-name {
+  text-align: center;
+  color: rgb(255, 196, 0);
+}
+
+.gallery-name {
+  text-align: center;
+  color: #05fc25;
+}
+
+.card-heding {
+}
+
+.card-text {
+  margin-top: 10px;
+}
+
+.gallery-simpllightbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: $container-width;
+  background-color: rgb(116, 116, 252);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.card-thumb {
+}
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -1 * $card-set-gap;
+  margin-left: -1 * $card-set-gap;
+}
+.card-content {
+  padding: 10px;
+}
+.item {
+  color: white;
+  // outline: 1px solid blue;
+  padding: 10px;
+  flex-basis: $container-width / $number-of-card - $card-set-gap;
+  margin-top: $card-set-gap;
+  margin-left: $card-set-gap;
+  // border-radius: 10px;
+  // overflow: hidden;
+}
+.card {
+  box-shadow: inset 1px 1px 16px rgba(203, 203, 203, 0.8), inset -1px -1px 16px #ffffff;
+  box-shadow: 12px 2px 1px rgba(0, 0, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 // якщо потрібна внутрішня тінь
 // box-shadow: inset 1px 1px 16px rgba(203, 203, 203, 0.8), inset -1px -1px 16px #ffffff;
 // якщо потрібна зовнішня тінь
 // box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.3);
+// box-shadow: 12px 2px 1px rgba(0, 0, 255, 0.2);
