@@ -1,0 +1,41 @@
+body {
+  color: #757575;
+  font-family: Roboto, sans-serif;
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+/* Сброс отступов между элементами */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+// якщо потрібна внутрішня тінь
+// box-shadow: inset 1px 1px 16px rgba(203, 203, 203, 0.8), inset -1px -1px 16px #ffffff;
+// якщо потрібна зовнішня тінь
+// box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.3);
