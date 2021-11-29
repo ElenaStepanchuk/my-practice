@@ -11,4 +11,4 @@ const lightbox = new SimpleLightbox('.gallery a', {
     captionDelay: 250,
     nav: true,
     close: true,
-  });
+});
