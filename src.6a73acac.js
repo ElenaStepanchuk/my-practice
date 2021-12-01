@@ -6,6 +6,6 @@ var t=arguments[3];function e(t){return(e="function"==typeof Symbol&&"symbol"==t
 },{}],"kz9M":[function(require,module,exports) {
 
 },{}],"Focm":[function(require,module,exports) {
-"use strict";require("./sass/main.scss");var i=s(require("simplelightbox"));function s(i){return i&&i.__esModule?i:{default:i}}require("simplelightbox/dist/simple-lightbox.min.css");const t=new i.default(".gallery a",{captions:!0,captionsData:"alt",captionPosition:"bottom",captionDelay:250,nav:!0,close:!0});
+"use strict";require("./sass/main.scss");var t=i(require("simplelightbox"));function i(t){return t&&t.__esModule?t:{default:t}}require("simplelightbox/dist/simple-lightbox.min.css");const o=new t.default(".more-photos-simplightbox a",{captions:!0,captionsData:"alt",captionPosition:"bottom",captionDelay:250,nav:!0,close:!0}),a=new t.default(".gallery a",{captions:!0,captionsData:"alt",captionPosition:"bottom",captionDelay:250,nav:!0,close:!0});
 },{"./sass/main.scss":"clu1","simplelightbox":"yx6k","simplelightbox/dist/simple-lightbox.min.css":"kz9M"}]},{},["Focm"], null)
-//# sourceMappingURL=/my-practice/src.664794dc.js.map
+//# sourceMappingURL=/my-practice/src.6a73acac.js.map
