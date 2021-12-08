@@ -23,9 +23,14 @@ const lightbox2 = new SimpleLightbox('.more-photos-simplightbox a', {
 });
 
 // ----------------------------
-import { films } from "./trending_films";
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
-console.log(films)
+
+import { films } from "./trending_films";
+// import { articles } from "./trending_films";
+import { getFilms } from "./getFilms"
+// import { makeGenres } from "./makeGenres"
 
   const refs = {
     closeModalCardBtn: document.querySelector('[data-modal-card-close]'),
@@ -34,15 +39,14 @@ console.log(films)
 
   films.addEventListener('click', handleModalCardOpen);
   refs.closeModalCardBtn.addEventListener('click', handleModalCardClose);
-  
 
-
-  function handleModalCardOpen(event) {
+  function handleModalCardOpen() {
     if (refs.modalCard.classList.contains('is-hidden')) {
       document.addEventListener('keydown', handleModalCardEsc);
       refs.modalCard.classList.remove('is-hidden');
       console.log('Модалка с карточкой фильма открыта');
-      getFilms().then(hendleGalleryClick)
+      getFilms().then(createModalCard)
+    
   } return;
 }
   
@@ -63,16 +67,6 @@ function handleModalCardEsc(event) {
     // document.removeEventListener('mousedown', handleModalCardClickClose);
   } return;
 }
-
-
-import { articles } from "./trending_films";
-
-import { getFilms } from "./getFilms"
-
-import { makeGenres } from "./makeGenres"
-
-const galeryElementsRefs = document.querySelector('.gallery');
-
 
 const createModalCard = films
   .map(({ poster_path, original_title, vote_average, vote_count, title, popularity, genre_ids, overview }) => {
@@ -98,6 +92,15 @@ const createModalCard = films
   })
   .join('');
 
-console.log(createModalCard)
-  
+films.insertAdjacentHTML('beforeend', createModalCard)
+// createModalCard.show()
 
+new SimpleLightbox('.gallery a', {
+    nav: true,   
+    captions: true,
+    captionsData: 'alt',
+    captionPosition: 'bottom',
+    captionDelay: 250,
+    close: true,
+
+   });
