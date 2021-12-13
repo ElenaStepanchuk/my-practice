@@ -38,7 +38,7 @@ function handleModalCardEsc(event) {
     // document.removeEventListener('mousedown', handleModalCardClickClose);
   } return;
 }
-// ,-----------------
+// ,---------------
 
 function markUpModal({ poster_path, title, release_date, vote_average, vote_count, popularity, original_title, overview, id, genre_ids }) {
   getYouTube(title, release_date).then(modal)
