@@ -119,4 +119,32 @@ function markUpModal({ poster_path, title, vote_average, vote_count, popularity,
             instance.element().querySelector('a').onclick = instance.close
         }
           }).show();
+}
+  
+// ___________________________
+
+, {
+      onShow: () => {
+        window.addEventListener('keydown', handleKeydown);
+        
+      },
+      onClose: () => {
+        window.removeEventListener('keydown', handleKeydown);
+        console.log('Модалка с карточкой фильма закрыта кликом вне области модалки');
+      },
+    });
+
+  instance.show()
+  function handleKeydown({ key }) {
+    switch (key) {
+        case 'Escape':
+        instance.close();
+        console.log('Модалка с карточкой фильма закрыта кликом по кнопке "ESC"');
+        break;
+    
+      default:
+        alert('Что-то пошло не так!');
+    }
+
   }
+}
